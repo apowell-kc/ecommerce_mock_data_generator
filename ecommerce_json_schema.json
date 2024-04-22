@@ -1,0 +1,62 @@
+{
+    "customer_id": {
+        "type": "number.int",
+        "params": [
+          {
+            "min": [number],
+            "max": [number]
+          }
+            ]
+          },
+    "first_name": {
+        "type": "person.firstName"
+      },
+      "last_name": {
+        "type": "person.lastName"
+      },
+    "email": {
+        "type": "internet.email"
+      },
+      "phone_number": {
+        "type": "number.int",
+        "params": [
+          {
+            "min": 1000000000,
+            "max": 9999999999
+          }
+        ]
+      },
+      "sign_up_date": {
+        "type": "mockingbird.datetimeBetween",
+        "params": [
+            {
+                "start": "2023-01-01T00:00:00.000Z", 
+                "end": "2023-12-31T23:59:59.999Z"
+            }
+        ]
+    },
+      "preferences": {
+        "type": "mockingbird.pick",
+        "params": [
+          {
+            "values": [
+              "email",
+              "sms",
+              "phone"
+            ]
+          }
+        ]
+      },
+    "opt_in_status": {
+        "type": "mockingbird.pick",
+        "params": [
+          {
+            "values": [
+              "Y",
+              "N"
+            ]
+          }
+        ]
+      }
+
+  }
